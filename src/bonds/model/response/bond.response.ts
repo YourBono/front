@@ -13,10 +13,12 @@ export interface BondResponse {
   emissionDate: string;
   gracePeriodTypeId: number;
   gracePeriodDuration: number;
-  currencyTypeId: number;
-  primeRate: number;
-  structuredRate: number;
-  placementRate: number;
-  floatingRate: number;
-  cavaliRate: number;
+  currencyTypeId: number,
+  premiumRate: number,
+  structuredRate: number,
+  placementRate: number,
+  floatingRate: number,
+  cavaliRate: number,
+  daysPerYear: number,
+  taxRate: number,
 }

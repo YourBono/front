@@ -13,11 +13,11 @@ export const BondAdditionalRatesComponent: React.FC<Props> = ({ formData, handle
       <h2 className="text-2xl font-semibold mb-4 ">Tasas Adicionales</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
-          { label: 'Tasa Prime (%)', key: 'primeRate' },
-          { label: 'Tasa Estructurada (%)', key: 'structuredRate' },
-          { label: 'Tasa de Colocación (%)', key: 'placementRate' },
-          { label: 'Tasa Flotante (%)', key: 'floatingRate' },
-          { label: 'Tasa CAVALI (%)', key: 'cavaliRate' },
+          { label: 'Prima (%)', key: 'premiumRate' },
+          { label: 'Estructuración (%)', key: 'structuredRate' },
+          { label: 'Colocación (%)', key: 'placementRate' },
+          { label: 'Flotación (%)', key: 'floatingRate' },
+          { label: 'CAVALI (%)', key: 'cavaliRate' },
         ].map(({ label, key }) => (
           <div key={key}>
             <label className="block font-medium mb-1">{label}</label>
@@ -28,6 +28,8 @@ export const BondAdditionalRatesComponent: React.FC<Props> = ({ formData, handle
               className={`w-full p-2 border rounded ${
                 errors?.[key] ? 'border-red-500' : 'border-gray-300'
               }`}
+              min={0}
+              step="any"
             />
             {errors?.[key] && <span className="text-sm text-red-500">{errors[key]}</span>}
           </div>

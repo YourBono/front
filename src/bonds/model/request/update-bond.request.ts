@@ -12,9 +12,11 @@ export interface UpdateBondRequest {
   gracePeriodTypeId: number,
   gracePeriodDuration: number,
   currencyTypeId: number,
-  primeRate: number,
+  premiumRate: number,
   structuredRate: number,
   placementRate: number,
   floatingRate: number,
-  cavaliRate: number
+  cavaliRate: number,
+  daysPerYear: number,
+  taxRate: number,
 }

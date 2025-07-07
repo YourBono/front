@@ -17,10 +17,10 @@ export const BondInterestRatesComponent: React.FC<Props> = ({ formData, handleCh
           <select
             value={formData.interestRateTypeId}
             onChange={(e) => handleChange('interestRateTypeId', parseInt(e.target.value))}
-            className="w-full p-2 border border-gray-300 rounded"
+            className="w-full p-2 border border-gray-300 rounded "
           >
-            <option value={1}>Fija</option>
-            <option value={2}>Variable</option>
+            <option className="text-black" value={1}>Nominal</option>
+            <option className="text-black" value={2}>Efectiva</option>
           </select>
         </div>
 
@@ -31,16 +31,32 @@ export const BondInterestRatesComponent: React.FC<Props> = ({ formData, handleCh
             value={formData.interestRate}
             onChange={(e) => handleChange('interestRate', parseFloat(e.target.value) || 0)}
             className={`w-full p-2 border rounded ${errors?.interestRate ? 'border-red-500' : 'border-gray-300'}`}
+            min={0}
+            step="any"
           />
         </div>
 
         <div>
-          <label className="block font-medium mb-1">Tasa de Descuento (%)</label>
+          <label className="block font-medium mb-1">Tasa anual de Descuento (%)</label>
           <input
             type="number"
             value={formData.discountRate}
             onChange={(e) => handleChange('discountRate', parseFloat(e.target.value) || 0)}
             className={`w-full p-2 border rounded ${errors?.discountRate ? 'border-red-500' : 'border-gray-300'}`}
+            min={0}
+            step="any"
+          />
+        </div>
+
+        <div>
+          <label className="block font-medium mb-1">Impuesto a la Renta (%)</label>
+          <input
+            type="number"
+            value={formData.taxRate}
+            onChange={(e) => handleChange('taxRate', parseFloat(e.target.value) || 0)}
+            className={`w-full p-2 border rounded ${errors?.taxRate ? 'border-red-500' : 'border-gray-300'}`}
+            min={0}
+            step="any"
           />
         </div>
       </div>

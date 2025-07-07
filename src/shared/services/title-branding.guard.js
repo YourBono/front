@@ -1,5 +1,5 @@
 export const titleBrandingGuard = (to, from, next) => {
-  const baseTitle = 'AlquilaFacil';
+  const baseTitle = 'YourBono';
   document.title = `${baseTitle} | ${to.meta['title']}`;
   next();
 }

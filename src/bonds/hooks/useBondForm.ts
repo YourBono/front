@@ -19,12 +19,14 @@ export const useBondForm = (userId: number) => {
     emissionDate: new Date().toISOString().split('T')[0],
     gracePeriodTypeId: 1,
     gracePeriodDuration: 0,
-    currencyTypeId: 1,
-    primeRate: 3.0,
+    currencyTypeId: localStorage.getItem('currencyTypeId') ? parseInt(localStorage.getItem('currencyTypeId')!) : 1,
+    premiumRate: 3.0,
     structuredRate: 1.0,
     placementRate: 2.0,
     floatingRate: 0.5,
     cavaliRate: 0.25,
+    daysPerYear: localStorage.getItem('daysPerYear') ? parseInt(localStorage.getItem('daysPerYear')!) : 360,
+    taxRate: 0.15,
   });
 
   const [isLoading, setIsLoading] = useState(false);
@@ -40,13 +42,6 @@ export const useBondForm = (userId: number) => {
       setIsLoading(true);
       const formatted = {
         ...formData,
-        interestRate: formData.interestRate / 100,
-        discountRate: formData.discountRate / 100,
-        primeRate: formData.primeRate / 100,
-        structuredRate: formData.structuredRate / 100,
-        placementRate: formData.placementRate / 100,
-        floatingRate: formData.floatingRate / 100,
-        cavaliRate: formData.cavaliRate / 100,
         emissionDate: formData.emissionDate + 'T00:00:00.000Z',
       };
 

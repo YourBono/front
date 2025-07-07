@@ -1,4 +1,4 @@
-import type { CashFlowItemResponse } from "../model/response/cash-flow-item.response";
+import type { CashFlowItemResponse } from "../../model/response/cash-flow-item.response";
 
 export const CashFlowTableComponent = ({ data }: { data: CashFlowItemResponse[] }) => (
   <div className="overflow-x-auto mt-6 text-(--text-color)">

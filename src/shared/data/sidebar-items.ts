@@ -20,45 +20,23 @@ export const sidebarItems: SidebarItem[] = [
     icon: icons.home
   },
   {
-    id: 'mis-datos',
-    label: 'Mis datos',
-    icon: icons.data
-  },
-  {
-    id: 'movimientos',
-    label: 'Movimientos',
-    icon: icons.movements
-  },
-  {
-    id: 'historial',
-    label: 'Historial',
-    icon: icons.history
-  },
-  {
     id: 'operaciones',
     label: 'Operaciones',
     icon: icons.operations,
     children: [
       {
         id: 'new-bond',
-        label: 'Registro'
+        label: 'Añadir bono'
       },
       {
         id: 'manage-bonds',
-        label: 'Valoración'
+        label: 'Control de bonos'
       },
-      {
-        id: 'analisis',
-        label: 'Análisis'
-      },
-      {
-        id: 'plan-seguros',
-        label: 'Plan de seguros'
-      }
+      
     ]
   },
   {
-    id: 'configuracion',
+    id: 'settings',
     label: 'Configuración',
     icon: icons.settings
   }

@@ -56,7 +56,7 @@ export function validateBondForm(formData: BondRequest): { isValid: boolean; err
 
   // Tasas negativas
   const rateFields: (keyof BondRequest)[] = [
-    'discountRate', 'primeRate', 'structuredRate', 'placementRate', 'floatingRate', 'cavaliRate',
+    'discountRate', 'premiumRate', 'structuredRate', 'placementRate', 'floatingRate', 'cavaliRate',
   ];
   for (const field of rateFields) {
     if (formData[field] as number < 0) {
@@ -132,11 +132,11 @@ export function validateBondBusinessLogic(formData: BondRequest): ValidationWarn
   }
 
   // Tasas adicionales vs interés
-  const totalExtraRates = formData.primeRate + formData.structuredRate + formData.placementRate +
+  const totalExtraRates = formData.premiumRate + formData.structuredRate + formData.placementRate +
     formData.floatingRate + formData.cavaliRate;
   if (totalExtraRates > formData.interestRate) {
     warnings.push({
-      field: 'primeRate',
+      field: 'premiumRate',
       message: `La suma de tasas adicionales (${totalExtraRates.toFixed(2)}%) es mayor que la tasa de interés.`,
     });
   }

@@ -41,6 +41,7 @@ export const BondBasicInfoComponent: React.FC<Props> = ({ formData, handleChange
             value={formData.nominalValue}
             onChange={(e) => handleChange('nominalValue', parseFloat(e.target.value) || 0)}
             className="w-full p-2 border rounded border-gray-300"
+            min={0}
           />
         </div>
 
@@ -51,6 +52,7 @@ export const BondBasicInfoComponent: React.FC<Props> = ({ formData, handleChange
             value={formData.marketValue}
             onChange={(e) => handleChange('marketValue', parseFloat(e.target.value) || 0)}
             className="w-full p-2 border rounded border-gray-300"
+            min={0}
           />
         </div>
       </div>

@@ -3,9 +3,9 @@ import { useState } from "react";
 import type { BondRequest } from "../model/request/bond.request";
 import type { UpdateBondRequest } from "../model/request/update-bond.request";
 import { useManageBonds } from "../hooks/useManageBonds";
-import { BondListComponent } from "../components/BondListComponent";
-import { EditBondModalComponent } from "../components/EditBondModalComponent";
-import { ConfirmationModalComponent } from "../components/ConfirmationModalComponent";
+import { BondListComponent } from "../components/manage-bonds/BondListComponent";
+import { EditBondModalComponent } from "../components/manage-bonds/EditBondModalComponent";
+import { ConfirmationModalComponent } from "../components/manage-bonds/ConfirmationModalComponent";
 import type { BondResponse } from "../model/response/bond.response";
 
 export const ManageBondsPage: React.FC = () => {
@@ -17,7 +17,7 @@ export const ManageBondsPage: React.FC = () => {
   if (isLoading) return <LayoutWithSidebar>...loading...</LayoutWithSidebar>;
 
   return (
-    <LayoutWithSidebar activeItem="registro">
+    <LayoutWithSidebar activeItem="manage-bonds">
       {/* Título y error */}
       <div className="p-10">
         <BondListComponent
