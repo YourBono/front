@@ -1,3 +1,4 @@
+// src/shared/data/sidebar-items.ts
 import type { SidebarItem } from "../model/sidebar/sidebar-item";
 
 const icons = {
@@ -10,7 +11,8 @@ const icons = {
   valuation: '💰',
   analysis: '📊',
   plan: '📝',
-  settings: '⚙️'
+  settings: '⚙️',
+  profile: '👤'
 };
 
 export const sidebarItems: SidebarItem[] = [
@@ -32,8 +34,12 @@ export const sidebarItems: SidebarItem[] = [
         id: 'manage-bonds',
         label: 'Control de bonos'
       },
-      
     ]
+  },
+  {
+    id: 'perfil',
+    label: 'Mi Perfil',
+    icon: icons.profile
   },
   {
     id: 'settings',
