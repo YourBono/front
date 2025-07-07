@@ -36,7 +36,7 @@ export class BondService {
   }
 
   async getCashFlowItemsByBondId(bondId: number): Promise<CashFlowItemResponse[]> {
-    const response = await http.get(`/bonds/get-cash-flow-items/${bondId}`);
+    const response = await http.get(`/bonds/get-cash-flow/${bondId}`);
     return response.data;
   }
 }

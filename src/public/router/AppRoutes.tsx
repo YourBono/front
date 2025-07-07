@@ -9,6 +9,7 @@ import { ProfilePage } from "@/auth/pages/ProfilePage";
 
 
 import { NotFoundPage } from "../pages/NotFoundPage";
+import { BondCashFlowPage } from "@/bonds/pages/BondCashFlowPage";
 
 export const AppRoutes = () => (
   <Routes>
@@ -23,6 +24,7 @@ export const AppRoutes = () => (
       <Route path='/new-bond' element={<NewBondPage />}/>
       <Route path='/manage-bonds' element={<ManageBondsPage />}/>
       <Route path='/profile' element={<ProfilePage />}/>
+      <Route path="/bond/:id/cash-flow" element={<BondCashFlowPage />} />
     </Route>
   </Routes>
 );
