@@ -19,7 +19,7 @@ export const ProfilePage: React.FC = () => {
   // Función para obtener el ID del usuario desde el token JWT
   const getUserId = (): number | null => {
     try {
-      const token = localStorage.getItem('authToken'); // Cambio aquí: 'token' → 'authToken'
+      const token = localStorage.getItem('token'); // Cambio aquí: 'token' → 'authToken'
       if (!token) {
         return null;
       }
