@@ -1,6 +1,5 @@
 import LayoutWithSidebar from "@/shared/layouts/LayoutWithSidebar";
 import { useState } from "react";
-import type { BondRequest } from "../model/request/bond.request";
 import type { UpdateBondRequest } from "../model/request/update-bond.request";
 import { useManageBonds } from "../hooks/useManageBonds";
 import { BondListComponent } from "../components/manage-bonds/BondListComponent";
@@ -9,7 +8,7 @@ import { ConfirmationModalComponent } from "../components/manage-bonds/Confirmat
 import type { BondResponse } from "../model/response/bond.response";
 
 export const ManageBondsPage: React.FC = () => {
-  const { bonds, isLoading, error, actionLoading, fetchBonds, deleteBond, updateBond } = useManageBonds();
+  const { bonds, isLoading, actionLoading, deleteBond, updateBond } = useManageBonds();
 
   const [confirm, setConfirm] = useState<{ show: boolean; bond: BondResponse | null }>({ show: false, bond: null });
   const [edit, setEdit] = useState<{ show: boolean; bond: BondResponse | null }>({ show: false, bond: null });
