@@ -22,7 +22,7 @@ export const useAuthenticationStore = create<AuthenticationState>()(
           });
           console.log(useAuthenticationStore.getState());
           localStorage.setItem('token', response.token);
-          navigate('/');
+          navigate('/home');
         } catch (err) {
           console.error('Error en signIn:', err);
           throw new Error('Correo o contraseña incorrectos');
