@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { RequireAuthentication } from "@/auth/components/RequireAuthentication";
 import { SignInPage } from "@/auth/pages/SignInPage";
 import { SignUpPage } from "@/auth/pages/SignUpPage";
@@ -14,9 +14,9 @@ import { SettingsPage } from "../pages/SettingsPage";
 
 export const AppRoutes = () => (
   <Routes>
-    <Route path='/' element={<Navigate to="/home" replace />}/>
-    <Route path='/sign-in' element={<SignInPage />}/>
-    <Route path='/sign-up' element={<SignUpPage />}/>
+      <Route path='/' element={<SignInPage />}/>
+      <Route path='/sign-in' element={<SignInPage />}/>
+      <Route path='/sign-up' element={<SignUpPage />}/>
     <Route path="*" element={<NotFoundPage />} />
     
     {/* Protected Routes */}
