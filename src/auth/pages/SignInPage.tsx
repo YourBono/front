@@ -103,6 +103,7 @@ export const SignInPage: React.FC = () => {
         <button
           type="button"
           className="bg-(--button-color) text-white p-4 rounded-md hover:cursor-pointer"
+          onClick={() => navigate('/sign-up')}
         >
           Regístrate
         </button>
