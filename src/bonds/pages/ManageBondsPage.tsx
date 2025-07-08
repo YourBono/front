@@ -16,8 +16,12 @@ export const ManageBondsPage: React.FC = () => {
   if (isLoading) return <LayoutWithSidebar>...loading...</LayoutWithSidebar>;
 
   return (
+
+
     <LayoutWithSidebar activeItem="manage-bonds">
-      {/* Título y error */}
+      <h1 className="text-6xl font-extrabold mb-10 text-white text-center py-10">
+        Control de bonos
+        </h1>
       <div className="p-10">
         <BondListComponent
           bonds={bonds}

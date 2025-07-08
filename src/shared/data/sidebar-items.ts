@@ -11,8 +11,7 @@ const icons = {
   valuation: '💰',
   analysis: '📊',
   plan: '📝',
-  settings: '⚙️',
-  profile: '👤'
+  settings: '⚙️'
 };
 
 export const sidebarItems: SidebarItem[] = [
@@ -35,11 +34,6 @@ export const sidebarItems: SidebarItem[] = [
         label: 'Control de bonos'
       },
     ]
-  },
-  {
-    id: 'perfil',
-    label: 'Mi Perfil',
-    icon: icons.profile
   },
   {
     id: 'settings',
